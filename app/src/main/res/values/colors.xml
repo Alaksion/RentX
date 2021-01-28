@@ -6,5 +6,14 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
+
     <color name="white">#FFFFFFFF</color>
+    <color name="app_red">#DC1637</color>
+    <color name="app_light_red">#FF99AA</color>
+    <color name="app_green">#03B352</color>
+    <color name="app_black">#1B1B1F</color>
+
+    <color name="app_title_grey">#47474D</color>
+    <color name="app_text_grey">#7A7A80</color>
+    <color name="app_text_detail">#AEAEB3</color>
 </resources>
