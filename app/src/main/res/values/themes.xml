@@ -23,15 +23,52 @@
         <item name="android:textColor">@color/app_title_grey</item>
     </style>
 
+    <style name="TextViewTitleWhite">
+        <item name="android:fontFamily">@font/archivo_bold</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
     <style name="TextViewText">
         <item name="android:fontFamily">@font/archivo_regular</item>
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/app_text_grey</item>
     </style>
 
+    <style name="TextViewTextWhite">
+        <item name="android:fontFamily">@font/archivo_regular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
     <style name="TextViewTextSecondary">
         <item name="android:fontFamily">@font/archivo_regular</item>
         <item name="android:textSize">40sp</item>
         <item name="android:textColor">@color/app_secundary_grey</item>
+    </style>
+
+    <style name="ButtonRed">
+        <item name="android:backgroundTint">@color/app_red</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:padding">20dp</item>
+    </style>
+
+    <style name="ButtonBlack">
+        <item name="android:backgroundTint">@color/app_dark_grey</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:padding">20dp</item>
+    </style>
+
+    <style name="EditText">
+        <item name="android:background">@color/app_input_background</item>
+        <item name="android:padding">25dp</item>
+    </style>
+    
+    <style name="CheckBox">
+        <item name="android:padding">2dp</item>
+        <item name="background">@color/app_input_background</item>
+        <item name="android:textColor">@color/app_text_detail</item>
+        <item name="buttonTint">@color/app_title_grey</item>
     </style>
 </resources>

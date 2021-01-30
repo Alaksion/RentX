@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RentX">
-        <activity android:name=".onboarding.activities.OnboardingActivity"></activity>
+        <activity android:name=".authentication.activities.AuthenticationActivity"></activity>
+        <activity android:name=".onboarding.activities.OnboardingActivity" />
         <activity android:name=".splash.activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

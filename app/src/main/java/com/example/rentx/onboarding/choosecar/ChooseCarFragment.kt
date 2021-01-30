@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.navigation.Navigation
 import com.example.rentx.MainActivity
 import com.example.rentx.R
+import com.example.rentx.authentication.activities.AuthenticationActivity
 import kotlinx.android.synthetic.main.fragment_choose_car.*
 
 
@@ -32,7 +33,7 @@ class ChooseCarFragment : Fragment(), View.OnClickListener {
         when (v.id) {
             iv_car_next_screen.id -> {
                 requireActivity().finish()
-                startActivity(Intent(activity, MainActivity::class.java))
+                startActivity(Intent(activity, AuthenticationActivity::class.java))
             }
         }
     }

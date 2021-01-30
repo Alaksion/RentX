@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".authentication.menu.AuthMenuFragment"
+    android:paddingHorizontal="30dp"
+    android:background="@color/app_black">
+
+    <ImageView
+        android:id="@+id/iv_icon_union"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@drawable/ic_union"
+        android:layout_marginTop="150dp"/>
+
+    <TextView
+        android:id="@+id/tv_menu_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextViewTitleWhite"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_icon_union"
+        android:text="@string/seja_bem_vindo"
+        android:layout_marginTop="150dp" />
+
+    <TextView
+        android:id="@+id/tv_menu_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextViewTextWhite"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_menu_title"
+        android:text="@string/o_que_voc_deseja_fazer"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/bt_menu_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/bt_menu_register"
+        app:layout_constraintTop_toBottomOf="@id/tv_menu_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.7"
+        android:text="@string/login"
+        style="@style/ButtonRed"
+        android:layout_marginEnd="10dp"
+        />
+
+    <Button
+        android:layout_width="0dp"
+        android:id="@+id/bt_menu_register"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/bt_menu_login"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bt_menu_login"
+        app:layout_constraintBottom_toBottomOf="@id/bt_menu_login"
+        android:text="@string/register"
+        style="@style/ButtonBlack"
+        android:layout_marginStart="10dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
