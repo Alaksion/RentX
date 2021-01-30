@@ -16,4 +16,6 @@
     <color name="app_title_grey">#47474D</color>
     <color name="app_text_grey">#7A7A80</color>
     <color name="app_text_detail">#AEAEB3</color>
+
+    <color name="app_secundary_grey">#EBEBF0</color>
 </resources>

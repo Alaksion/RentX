@@ -1,4 +1,4 @@
-package com.example.rentx.view
+package com.example.rentx.splash.activities
 
 import android.animation.Animator
 import android.animation.AnimatorSet
@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.view.View
 import com.example.rentx.MainActivity
 import com.example.rentx.R
+import com.example.rentx.onboarding.activities.OnboardingActivity
 import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity : AppCompatActivity(), Animator.AnimatorListener {
@@ -50,7 +51,7 @@ class SplashActivity : AppCompatActivity(), Animator.AnimatorListener {
     }
 
     override fun onAnimationEnd(animation: Animator) {
-        startActivity(Intent(this, MainActivity::class.java))
+        startActivity(Intent(this, OnboardingActivity::class.java))
         finish()
     }
 
