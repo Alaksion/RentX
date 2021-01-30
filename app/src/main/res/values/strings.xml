@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">rentX</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="primeiro_escolha_a_data">Primeiro,escolha a data</string>
+    <string name="voc_quem_define_um_per_odo_e_n_s_mostraremos_os_carros_dispon_veis">Você é quem define um período, e nós mostraremos os carros disponíveis.</string>
+    <string name="depois_escolha_o_carro">Depois, escolha o carro</string>
+    <string name="v_rios_modelos_para_voc_dirigir_seguro_com_conforto_e_seguran_a">Vários modelos para você dirigir seguro, com conforto e segurança.</string>
+    <string name="_01">01</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.example.rentx.view
+package com.example.rentx.splash.activities
 
 import android.animation.Animator
 import android.animation.AnimatorSet
