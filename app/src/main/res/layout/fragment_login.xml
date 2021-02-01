@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".authentication.login.LoginFragment"
+    tools:context=".authentication.presentation.login.LoginFragment"
     android:paddingHorizontal="30dp">
 
     <ImageView
@@ -38,12 +38,10 @@
 
     <View
         android:id="@+id/v_icon_mail_container"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
         android:layout_marginTop="80dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_login_text"
-        android:background="@color/app_input_background"/>
+        style="@style/IconBox"/>
 
     <ImageView
         android:id="@+id/iv_icon_mail"
@@ -71,12 +69,10 @@
 
     <View
         android:id="@+id/v_icon_password_container"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:background="@color/app_input_background"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/v_icon_mail_container"
-        android:layout_marginTop="25dp"/>
+        android:layout_marginTop="25dp"
+        style="@style/IconBox"/>
 
     <ImageView
         android:id="@+id/iv_icon_password"
@@ -97,6 +93,7 @@
         app:layout_constraintTop_toTopOf="@id/v_icon_password_container"
         app:layout_constraintBottom_toBottomOf="@id/v_icon_password_container"
         android:layout_marginStart="15dp"
+        android:hint="Senha"
         style="@style/EditText"/>
 
     <CheckBox

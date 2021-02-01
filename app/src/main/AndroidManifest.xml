@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RentX">
-        <activity android:name=".authentication.activities.AuthenticationActivity"></activity>
-        <activity android:name=".onboarding.activities.OnboardingActivity" />
-        <activity android:name=".splash.activities.SplashActivity">
+        <activity android:name=".authentication.AuthenticationActivity"></activity>
+        <activity android:name=".onboarding.OnboardingActivity" />
+        <activity android:name=".splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/authMenuFragment"
-        android:name="com.example.rentx.authentication.menu.AuthMenuFragment"
+        android:name="com.example.rentx.authentication.presentation.menu.AuthMenuFragment"
         android:label="fragment_auth_menu"
         tools:layout="@layout/fragment_auth_menu" >
         <action
@@ -20,12 +20,16 @@
 
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.example.rentx.authentication.register.RegisterFragment"
+        android:name="com.example.rentx.authentication.presentation.registerforms.RegisterFragment"
         android:label="fragment_register"
-        tools:layout="@layout/fragment_register" />
+        tools:layout="@layout/fragment_register_email" />
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.rentx.authentication.login.LoginFragment"
+        android:name="com.example.rentx.authentication.presentation.login.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_authMenuFragment"
+            app:destination="@id/authMenuFragment" />
+    </fragment>
 </navigation>

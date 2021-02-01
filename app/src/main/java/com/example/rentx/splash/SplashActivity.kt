@@ -1,4 +1,4 @@
-package com.example.rentx.splash.activities
+package com.example.rentx.splash
 
 import android.animation.Animator
 import android.animation.AnimatorSet
@@ -7,9 +7,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.example.rentx.MainActivity
 import com.example.rentx.R
-import com.example.rentx.onboarding.activities.OnboardingActivity
+import com.example.rentx.onboarding.OnboardingActivity
 import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity : AppCompatActivity(), Animator.AnimatorListener {

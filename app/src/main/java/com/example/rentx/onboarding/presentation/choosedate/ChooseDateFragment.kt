@@ -1,4 +1,4 @@
-package com.example.rentx.onboarding.choosedate
+package com.example.rentx.onboarding.presentation.choosedate
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

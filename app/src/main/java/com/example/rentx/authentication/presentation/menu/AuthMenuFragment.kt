@@ -1,4 +1,4 @@
-package com.example.rentx.authentication.menu
+package com.example.rentx.authentication.presentation.menu
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
