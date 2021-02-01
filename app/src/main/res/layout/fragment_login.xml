@@ -37,31 +37,31 @@
         android:text="@string/fa_a_seu_login_para_come_ar_uma_experi_ncia_incr_vel"/>
 
     <View
-        android:id="@+id/v_icon_mail_container"
+        android:id="@+id/v_icon_email_container"
         android:layout_marginTop="80dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_login_text"
         style="@style/IconBox"/>
 
     <ImageView
-        android:id="@+id/iv_icon_mail"
+        android:id="@+id/iv_icon_email"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        app:layout_constraintLeft_toLeftOf="@id/v_icon_mail_container"
-        app:layout_constraintRight_toRightOf="@id/v_icon_mail_container"
-        app:layout_constraintTop_toTopOf="@id/v_icon_mail_container"
-        app:layout_constraintBottom_toBottomOf="@id/v_icon_mail_container"
+        app:layout_constraintLeft_toLeftOf="@id/v_icon_email_container"
+        app:layout_constraintRight_toRightOf="@id/v_icon_email_container"
+        app:layout_constraintTop_toTopOf="@id/v_icon_email_container"
+        app:layout_constraintBottom_toBottomOf="@id/v_icon_email_container"
         android:src="@drawable/ic_mail"
         android:backgroundTint="@color/app_input_background" />
 
     <EditText
-        android:id="@+id/tv_mail"
+        android:id="@+id/et_email"
         android:layout_width="0dp"
         android:layout_height="70dp"
-        app:layout_constraintLeft_toRightOf="@id/v_icon_mail_container"
+        app:layout_constraintLeft_toRightOf="@id/v_icon_email_container"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/v_icon_mail_container"
-        app:layout_constraintBottom_toBottomOf="@id/v_icon_mail_container"
+        app:layout_constraintTop_toTopOf="@id/v_icon_email_container"
+        app:layout_constraintBottom_toBottomOf="@id/v_icon_email_container"
         android:layout_marginStart="15dp"
         android:hint="@string/e_mail"
         style="@style/EditText"
@@ -70,7 +70,7 @@
     <View
         android:id="@+id/v_icon_password_container"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/v_icon_mail_container"
+        app:layout_constraintTop_toBottomOf="@id/iv_icon_email"
         android:layout_marginTop="25dp"
         style="@style/IconBox"/>
 

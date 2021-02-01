@@ -16,4 +16,13 @@
     <string name="lembrar_me">Lembrar-me</string>
     <string name="esqueci_minha_senha">Esqueci minha senha</string>
     <string name="login">Login</string>
+    <string name="crie_sua_conta">Crie sua Conta</string>
+    <string name="fa_a_seu_cadastro_de_forma_r_pida_e_f_cil">Faça seu cadastro de forma rápida e fácil.</string>
+    <string name="nome">Nome</string>
+    <string name="_1_dados">1. Dados</string>
+    <string name="pr_ximo">Próximo</string>
+    <string name="senha">Senha</string>
+    <string name="conta_criada">Conta criada</string>
+    <string name="agora_s_fazer_login_e_aproveitar">Agora é só fazer login e aproveitar.</string>
+    <string name="ok">Ok</string>
 </resources>
