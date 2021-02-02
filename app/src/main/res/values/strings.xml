@@ -7,4 +7,22 @@
     <string name="depois_escolha_o_carro">Depois, escolha o carro</string>
     <string name="v_rios_modelos_para_voc_dirigir_seguro_com_conforto_e_seguran_a">Vários modelos para você dirigir seguro, com conforto e segurança.</string>
     <string name="_01">01</string>
+    <string name="o_que_voc_deseja_fazer">O que você deseja fazer</string>
+    <string name="seja_bem_vindo">Seja Bem vindo</string>
+    <string name="register">Register</string>
+    <string name="estamos_quase_l">Estamos quase lá.</string>
+    <string name="fa_a_seu_login_para_come_ar_uma_experi_ncia_incr_vel">Faça seu login para começar uma experiência incrível.</string>
+    <string name="e_mail">E-mail</string>
+    <string name="lembrar_me">Lembrar-me</string>
+    <string name="esqueci_minha_senha">Esqueci minha senha</string>
+    <string name="login">Login</string>
+    <string name="crie_sua_conta">Crie sua Conta</string>
+    <string name="fa_a_seu_cadastro_de_forma_r_pida_e_f_cil">Faça seu cadastro de forma rápida e fácil.</string>
+    <string name="nome">Nome</string>
+    <string name="_1_dados">1. Dados</string>
+    <string name="pr_ximo">Próximo</string>
+    <string name="senha">Senha</string>
+    <string name="conta_criada">Conta criada</string>
+    <string name="agora_s_fazer_login_e_aproveitar">Agora é só fazer login e aproveitar.</string>
+    <string name="ok">Ok</string>
 </resources>

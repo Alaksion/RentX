@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".authentication.presentation.registerforms.RegisterFragment"
+    android:paddingHorizontal="30dp">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/register_mail_go_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/ic_chevron_left"
+        android:layout_marginTop="35dp"/>
+
+    <TextView
+        android:id="@+id/tv_register_mail_title"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_mail_go_back"
+        style="@style/TextViewTitle"
+        android:text="@string/crie_sua_conta"
+        android:layout_marginTop="80dp"/>
+
+    <TextView
+        android:id="@+id/tv_register_mail_text"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_register_mail_title"
+        style="@style/TextViewText"
+        android:layout_marginTop="10dp"
+        android:text="@string/fa_a_seu_cadastro_de_forma_r_pida_e_f_cil"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_register_mail_text"
+        app:layout_constraintBottom_toTopOf="@id/iv_icon_person_container"
+        style="@style/TextViewBoldText"
+        android:text="@string/_1_dados" />
+
+    <View
+        android:id="@+id/iv_icon_person_container"
+        android:layout_marginTop="80dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_register_mail_text"
+        style="@style/IconBox"/>
+
+    <ImageView
+        android:id="@+id/iv_icon_person"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintLeft_toLeftOf="@id/iv_icon_person_container"
+        app:layout_constraintRight_toRightOf="@id/iv_icon_person_container"
+        app:layout_constraintTop_toTopOf="@id/iv_icon_person_container"
+        app:layout_constraintBottom_toBottomOf="@id/iv_icon_person_container"
+        android:src="@drawable/ic_person"
+        android:backgroundTint="@color/app_input_background" />
+
+    <EditText
+        android:id="@+id/et_register_name"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        app:layout_constraintLeft_toRightOf="@id/iv_icon_person_container"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_icon_person_container"
+        app:layout_constraintBottom_toBottomOf="@id/iv_icon_person_container"
+        android:layout_marginStart="15dp"
+        android:hint="@string/nome"
+        style="@style/EditText" />
+
+    <View
+        android:id="@+id/v_icon_email_container"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_icon_person_container"
+        android:layout_marginTop="25dp"
+        style="@style/IconBox"/>
+
+    <ImageView
+        android:id="@+id/iv_icon_email"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintLeft_toLeftOf="@id/v_icon_email_container"
+        app:layout_constraintRight_toRightOf="@id/v_icon_email_container"
+        app:layout_constraintTop_toTopOf="@id/v_icon_email_container"
+        app:layout_constraintBottom_toBottomOf="@id/v_icon_email_container"
+        android:src="@drawable/ic_mail"/>
+
+    <EditText
+        android:id="@+id/et_register_email"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        app:layout_constraintLeft_toRightOf="@id/v_icon_email_container"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/v_icon_email_container"
+        app:layout_constraintBottom_toBottomOf="@id/v_icon_email_container"
+        android:layout_marginStart="15dp"
+        android:hint="@string/e_mail"
+        style="@style/EditText"/>
+
+    <Button
+        android:id="@+id/bt_register_mail_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v_icon_email_container"
+        android:text="@string/pr_ximo"
+        style="@style/ButtonRed"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

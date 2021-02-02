@@ -1,12 +1,12 @@
-package com.example.rentx.onboarding.activities
+package com.example.rentx.authentication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.rentx.R
 
-class OnboardingActivity : AppCompatActivity() {
+class AuthenticationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_onboarding)
+        setContentView(R.layout.activity_authentication)
     }
 }
