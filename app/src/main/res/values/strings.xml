@@ -25,4 +25,11 @@
     <string name="conta_criada">Conta criada</string>
     <string name="agora_s_fazer_login_e_aproveitar">Agora é só fazer login e aproveitar.</string>
     <string name="ok">Ok</string>
+    <string name="title_activity_home">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="carlist">carlist</string>
+    <string name="appointments">appointments</string>
+    <string name="profile">profile</string>
 </resources>

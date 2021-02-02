@@ -1,5 +1,6 @@
 package com.example.rentx.authentication.presentation.login
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.rentx.R
+import com.example.rentx.home.HomeActivity
 import kotlinx.android.synthetic.main.fragment_login.*
 
 class LoginFragment : Fragment(), View.OnClickListener {
@@ -29,12 +31,21 @@ class LoginFragment : Fragment(), View.OnClickListener {
         when (v.id) {
             login_back_button.id -> Navigation.findNavController(v)
                 .navigate(R.id.action_loginFragment_to_authMenuFragment)
+
+            bt_login.id -> {
+                handleNavigateToHomePage()
+            }
         }
     }
 
     private fun setListeners() {
         login_back_button.setOnClickListener(this)
+        bt_login.setOnClickListener(this)
+    }
 
+    private fun handleNavigateToHomePage(){
+        requireActivity().finish()
+        startActivity(Intent(activity, HomeActivity::class.java))
     }
 
 }

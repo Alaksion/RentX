@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RentX">
-        <activity android:name=".authentication.AuthenticationActivity"></activity>
+        <activity
+            android:name=".home.HomeActivity"
+            android:label="@string/title_activity_home"></activity>
+        <activity android:name=".authentication.AuthenticationActivity" />
         <activity android:name=".onboarding.OnboardingActivity" />
         <activity android:name=".splash.SplashActivity">
             <intent-filter>
