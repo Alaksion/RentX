@@ -19,6 +19,7 @@ class SplashActivity : AppCompatActivity(), Animator.AnimatorListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
+
         setupAnimationSequence()
         animationSequence.addListener(this)
     }

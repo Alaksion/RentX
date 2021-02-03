@@ -32,4 +32,6 @@
     <string name="carlist">carlist</string>
     <string name="appointments">appointments</string>
     <string name="profile">profile</string>
+    <string name="agendamentos">Agendamentos</string>
+    <string name="_5_appointments">5 appointments</string>
 </resources>

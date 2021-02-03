@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".home.presentation.appointments.AppointmentsFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <data>
+        <variable
+            name="vm"
+            type="com.example.rentx.home.presentation.appointments.AppointmentsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/appointments" />
+        tools:context=".home.presentation.appointments.AppointmentsFragment">
 
-</FrameLayout>
+        <androidx.appcompat.widget.Toolbar
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/tb_appointments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_black"
+            app:titleTextColor="@color/white"
+            tools:title="Agendamentos"/>
+
+        <TextView
+            android:id="@+id/tv_appointments_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/tb_appointments"
+            app:layout_constraintBottom_toBottomOf="@id/tb_appointments"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginEnd="20dp"
+            tools:text="@string/_5_appointments"
+            style="@style/TextViewTextLightGrey"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
