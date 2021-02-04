@@ -11,11 +11,6 @@
         android:label="fragment_car_list"
         tools:layout="@layout/fragment_car_list" />
     <fragment
-        android:id="@+id/appointmentsFragment"
-        android:name="com.example.rentx.home.presentation.appointments.AppointmentsFragment"
-        android:label="fragment_appointments"
-        tools:layout="@layout/fragment_appointments" />
-    <fragment
         android:id="@+id/homeFragment2"
         android:name="com.example.rentx.home.presentation.home.HomeFragment"
         android:label="fragment_home2"
