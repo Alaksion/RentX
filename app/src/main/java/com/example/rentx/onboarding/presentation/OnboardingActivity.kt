@@ -1,4 +1,4 @@
-package com.example.rentx.onboarding
+package com.example.rentx.onboarding.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

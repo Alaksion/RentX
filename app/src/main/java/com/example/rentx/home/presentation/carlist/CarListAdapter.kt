@@ -1,18 +1,17 @@
-package com.example.rentx.home.presentation.carlist.adapter
+package com.example.rentx.home.presentation.carlist
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.rentx.R
-import com.example.rentx.home.presentation.carlist.listener.CarListListener
-import com.example.rentx.home.presentation.carlist.viewholder.CarListViewHolder
-import com.example.rentx.model.CarFuelType
-import com.example.rentx.model.CarModel
+import com.example.rentx.home.data.model.CarFuelType
+import com.example.rentx.home.data.model.CarModel
 
 class CarListAdapter : RecyclerView.Adapter<CarListViewHolder>() {
 
 
     private val carMock = CarModel(
+        0,
         "Audi",
         "Coupe R5",
         120.00,
@@ -21,6 +20,7 @@ class CarListAdapter : RecyclerView.Adapter<CarListViewHolder>() {
     )
 
     private val carMock2 = CarModel(
+        1,
         "Audi",
         "Coupe R5",
         120.00,
@@ -34,7 +34,10 @@ class CarListAdapter : RecyclerView.Adapter<CarListViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarListViewHolder {
         val item =
             LayoutInflater.from(parent.context).inflate(R.layout.car_list_card, parent, false)
-        return CarListViewHolder(item, mListener)
+        return CarListViewHolder(
+            item,
+            mListener
+        )
     }
 
     override fun getItemCount(): Int {

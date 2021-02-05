@@ -1,4 +1,4 @@
-package com.example.rentx.home
+package com.example.rentx.home.presentation
 
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView

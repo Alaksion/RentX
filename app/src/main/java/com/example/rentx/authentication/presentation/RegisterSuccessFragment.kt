@@ -1,4 +1,4 @@
-package com.example.rentx.authentication.presentation.registersuccess
+package com.example.rentx.authentication.presentation
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
