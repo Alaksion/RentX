@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".onboarding.presentation.choosedate.ChooseDateFragment"
+    tools:context=".onboarding.presentation.ChooseDateFragment"
     android:paddingHorizontal="30dp">
 
     <!-- TODO: Update blank fragment layout -->
@@ -13,7 +13,7 @@
         android:id="@+id/iv_calendar_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_calendar"
+        android:src="@drawable/ic_calendar_large"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/tv_choose_date_title"
@@ -30,7 +30,7 @@
 
     <TextView
         android:id="@+id/tv_choose_date_title"
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/iv_calendar_icon"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -42,7 +42,7 @@
 
     <TextView
         android:id="@+id/tv_choose_date_text"
-        android:layout_width="160dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="@string/voc_quem_define_um_per_odo_e_n_s_mostraremos_os_carros_dispon_veis"

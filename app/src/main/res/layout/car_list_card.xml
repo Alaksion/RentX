@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/car_list_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/app_input_background"
+    android:padding="30dp"
+    android:layout_marginBottom="20dp">
+
+    <TextView
+        android:id="@+id/tv_car_brand"
+        style="@style/CarList_FieldText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Audi" />
+
+    <TextView
+        android:id="@+id/tv_car_model"
+        style="@style/CarList_ModelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_car_brand"
+        tools:text="R5 Coupe" />
+
+    <TextView
+        android:id="@+id/tv_car_price_title"
+        style="@style/CarList_FieldText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/ao_dia"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_car_model" />
+
+    <TextView
+        android:id="@+id/tv_car_price"
+        style="@style/CarList_PriceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_car_price_title"
+        tools:text="R$ 420" />
+
+    <ImageView
+        android:id="@+id/iv_car_fuel_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tv_car_price_title"
+        app:layout_constraintBottom_toBottomOf="@id/tv_car_price"
+        app:layout_constraintLeft_toRightOf="@id/tv_car_price"
+        app:layout_constraintVertical_bias="0.5"
+        android:layout_marginStart="20dp"
+        tools:src="@drawable/ic_gasoline"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

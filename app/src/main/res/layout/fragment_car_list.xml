@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.example.rentx.home.presentation.carlist.CarListViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".home.presentation.carlist.CarListFragment">
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:id="@+id/cl_car_list_header"
+           android:layout_width="match_parent"
+           android:layout_height="120dp"
+           app:layout_constraintTop_toTopOf="parent"
+           android:background="@color/app_black"
+           android:paddingHorizontal="16dp">
+
+           <TextView
+               android:id="@+id/tv_car_list_title"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintLeft_toLeftOf="parent"
+               tools:text="Listagem"
+               style="@style/TextViewTitleWhite"
+               android:textSize="25sp"/>
+
+           <TextView
+               android:id="@+id/tv_car_quantity"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintRight_toRightOf="parent"
+               style="@style/TextViewTextLightGrey"
+               tools:text="5 carros"/>
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <EditText
+            android:layout_marginStart="15dp"
+            android:id="@+id/et_search"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:hint="@string/que_carro_voc_precisa"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/v_search_icon_box"
+            app:layout_constraintTop_toBottomOf="@id/cl_car_list_header"
+            app:layout_constraintBottom_toBottomOf="@id/cl_car_list_header"
+            app:layout_constraintVertical_bias="0.134"
+            android:background="@color/app_input_background"
+            android:paddingHorizontal="20dp"/>
+
+        <View
+            android:id="@+id/v_search_icon_box"
+            style="@style/IconBox"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintBottom_toBottomOf="@id/et_search"
+            app:layout_constraintLeft_toRightOf="@id/et_search"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/et_search" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:layout_constraintLeft_toLeftOf="@id/v_search_icon_box"
+            app:layout_constraintRight_toRightOf="@id/v_search_icon_box"
+            app:layout_constraintTop_toTopOf="@id/v_search_icon_box"
+            app:layout_constraintBottom_toBottomOf="@id/v_search_icon_box"
+            android:src="@drawable/ic_search" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_cars_list"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:paddingHorizontal="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/et_search"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
