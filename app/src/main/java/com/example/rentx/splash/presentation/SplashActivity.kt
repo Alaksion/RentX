@@ -47,11 +47,11 @@ class SplashActivity : AppCompatActivity(), Animator.AnimatorListener {
     }
 
     override fun onAnimationRepeat(animation: Animator?) {
-        TODO("Not yet implemented")
+
     }
 
     override fun onAnimationEnd(animation: Animator) {
-        startActivity(Intent(this, OnboardingActivity::class.java))
+        OnboardingActivity.start(this)
         finish()
     }
 

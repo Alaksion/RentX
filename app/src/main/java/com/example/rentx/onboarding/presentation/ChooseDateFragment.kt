@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.Navigation
 import com.example.rentx.R
+import com.example.rentx.authentication.presentation.AuthenticationActivity
 import kotlinx.android.synthetic.main.fragment_choose_car.*
 import kotlinx.android.synthetic.main.fragment_choose_date.*
 
@@ -27,7 +28,8 @@ class ChooseDateFragment : Fragment(), View.OnClickListener {
     override fun onClick(v: View) {
         when (v.id) {
             iv_date_next_screen.id -> {
-                Navigation.findNavController(v).navigate(R.id.action_next_onboarding_page)
+                AuthenticationActivity.start(requireActivity())
+                requireActivity().finish()
             }
         }
     }

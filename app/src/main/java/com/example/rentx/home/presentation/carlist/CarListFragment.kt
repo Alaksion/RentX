@@ -54,7 +54,7 @@ class CarListFragment : Fragment() {
     }
 
     private fun bindInfos(){
-        carListBinding.tbCarList.title = mViewModel.toolBarTitle
+        carListBinding.tvCarListTitle.text = mViewModel.toolBarTitle
         carListBinding.tvCarQuantity.text = mViewModel.getCarQuantityText()
     }
 

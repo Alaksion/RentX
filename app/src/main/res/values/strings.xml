@@ -2,10 +2,10 @@
     <string name="app_name">rentX</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="primeiro_escolha_a_data">Primeiro,escolha a data</string>
-    <string name="voc_quem_define_um_per_odo_e_n_s_mostraremos_os_carros_dispon_veis">Você é quem define um período, e nós mostraremos os carros disponíveis.</string>
-    <string name="depois_escolha_o_carro">Depois, escolha o carro</string>
-    <string name="v_rios_modelos_para_voc_dirigir_seguro_com_conforto_e_seguran_a">Vários modelos para você dirigir seguro, com conforto e segurança.</string>
+    <string name="primeiro_escolha_a_data">Primeiro,<br/> escolha a<br/> data</string>
+    <string name="voc_quem_define_um_per_odo_e_n_s_mostraremos_os_carros_dispon_veis">Você é quem define um<br/> período, e nós mostraremos<br/> os carros disponíveis.</string>
+    <string name="depois_escolha_o_carro">Depois,<br/> escolha o<br/> carro</string>
+    <string name="v_rios_modelos_para_voc_dirigir_seguro_com_conforto_e_seguran_a">Vários modelos para você<br/> dirigir seguro, com conforto<br/> e segurança.</string>
     <string name="_01">01</string>
     <string name="o_que_voc_deseja_fazer">O que você deseja fazer</string>
     <string name="seja_bem_vindo">Seja Bem vindo</string>
@@ -37,4 +37,6 @@
     <string name="que_carro_voc_precisa">Que carro você precisa?</string>
     <string name="ao_dia">Ao dia</string>
     <string name="registrar">Registrar</string>
+    <string name="perfil">Perfil</string>
+    <string name="user_profile_picture">User profile picture</string>
 </resources>

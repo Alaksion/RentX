@@ -43,8 +43,8 @@ class LoginFragment : Fragment(), View.OnClickListener {
     }
 
     private fun handleNavigateToHomePage(){
+        HomeActivity.start(requireActivity())
         requireActivity().finish()
-        startActivity(Intent(activity, HomeActivity::class.java))
     }
 
 }
