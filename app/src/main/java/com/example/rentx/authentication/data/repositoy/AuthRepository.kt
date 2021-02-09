@@ -4,7 +4,7 @@ import android.content.Context
 import com.example.rentx.authentication.data.model.UserModel
 import com.example.rentx.service.local.RentXDatabase
 
-class authenticationRepository(context: Context) {
+class AuthRepository(context: Context) {
 
     private val mDatabase = RentXDatabase.getInstance(context)
 

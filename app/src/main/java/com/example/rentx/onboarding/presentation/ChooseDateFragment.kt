@@ -28,8 +28,7 @@ class ChooseDateFragment : Fragment(), View.OnClickListener {
     override fun onClick(v: View) {
         when (v.id) {
             iv_date_next_screen.id -> {
-                AuthenticationActivity.start(requireActivity())
-                requireActivity().finish()
+                Navigation.findNavController(v).navigate(R.id.action_next_onboarding_page)
             }
         }
     }
