@@ -15,33 +15,39 @@ class AuthenticationViewModel(application: Application) : AndroidViewModel(appli
     private val mPrefs = SharedPrefs(application)
 
     private val mValidationSuccess = MutableLiveData<ValidationListener>()
-    var validationSuccess : LiveData<ValidationListener> = mValidationSuccess
+    var validationSuccess: LiveData<ValidationListener> = mValidationSuccess
 
 
-    fun createAccount(name: String, email: String, password: String, confirmPassword: String){
+    fun createAccount(name: String, email: String, password: String, confirmPassword: String) {
 
-        if(!isPasswordConfirmed(password, confirmPassword)){
+        if (!isPasswordConfirmed(password, confirmPassword)) {
             mValidationSuccess.value = ValidationListener("Senhas não coincidem")
             return
         }
 
-        if(isEmailAlreadyInUse(email)){
-            mValidationSuccess.value = ValidationListener("Senhas não coincidem")
-            return
+        val user = UserModel().apply {
+            this.email = email
+            this.name = name
+            this.password = password
+            this.id = 0
         }
 
-        val user = UserModel(0, name, email, password)
         mRepository.createUser(user)
         mValidationSuccess.value = ValidationListener()
-
     }
 
-    private fun isPasswordConfirmed(password: String, confirmPassword: String) : Boolean{
-        return password.equals(confirmPassword)
+    private fun isPasswordConfirmed(password: String, confirmPassword: String): Boolean {
+        return password == confirmPassword
     }
 
-    private fun isEmailAlreadyInUse(email: String) : Boolean{
-        return this.mRepository.findUserByEmail(email) != null
-    }
+    fun isEmailAlreadyInUse(email: String) {
+        val findUsedEmail : UserModel? = this.mRepository.findUserByEmail(email)
 
+        if (findUsedEmail != null) {
+            mValidationSuccess.value = ValidationListener("Email já está em uso")
+            return
+        }
+
+        mValidationSuccess.value = ValidationListener()
+    }
 }

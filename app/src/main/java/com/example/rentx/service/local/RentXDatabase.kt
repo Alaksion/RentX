@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.example.rentx.authentication.data.dao.AuthenticationDao
 import com.example.rentx.authentication.data.model.UserModel
 
-@Database(entities = [UserModel::class], version = 1)
+@Database(entities = [UserModel::class], version = 2)
 abstract class RentXDatabase : RoomDatabase() {
 
     abstract fun authDao() : AuthenticationDao

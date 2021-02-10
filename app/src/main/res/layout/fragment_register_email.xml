@@ -76,7 +76,8 @@
             app:layout_constraintBottom_toBottomOf="@id/iv_icon_person_container"
             android:layout_marginStart="15dp"
             android:hint="@string/nome"
-            style="@style/EditText" />
+            style="@style/EditText"
+            android:inputType="text"/>
 
         <View
             android:id="@+id/v_icon_email_container"
@@ -105,7 +106,8 @@
             app:layout_constraintBottom_toBottomOf="@id/v_icon_email_container"
             android:layout_marginStart="15dp"
             android:hint="@string/e_mail"
-            style="@style/EditText" />
+            style="@style/EditText"
+            android:inputType="textEmailAddress"/>
 
         <Button
             android:id="@+id/bt_register_mail_next"
@@ -116,7 +118,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/v_icon_email_container"
             android:text="@string/pr_ximo"
-            style="@style/ButtonRed" />
+            style="@style/ButtonRed"
+            android:enabled="false"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

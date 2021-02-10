@@ -5,19 +5,21 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class UserModel (
+class UserModel {
 
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "userId")
-    val id : Long,
+    var id : Long = 0
 
     @ColumnInfo(name = "name")
-    val name : String,
+    var name : String = ""
 
     @ColumnInfo(name = "email")
-    val email : String,
+    var email : String = ""
 
     @ColumnInfo(name = "password")
-    val password : String
+    var password : String = ""
 
-)
+}
+
+

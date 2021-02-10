@@ -7,7 +7,7 @@ class ValidationListener(string: String = ""){
 
     init {
         this.message = string
-        this.success = string.isNotEmpty()
+        this.success = string.isEmpty()
     }
 
     fun getResult() : Boolean{

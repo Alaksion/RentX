@@ -8,11 +8,11 @@ class AuthRepository(context: Context) {
 
     private val mDatabase = RentXDatabase.getInstance(context)
 
-    fun createUser(userModel: UserModel){
-        mDatabase.authDao().createUser(userModel)
+    fun createUser(userModel: UserModel) : Long{
+        return mDatabase.authDao().createUser(userModel)
     }
 
-    fun findUserByEmail(email : String){
-        mDatabase.authDao().findByEmail(email)
+    fun findUserByEmail(email : String) : UserModel{
+        return mDatabase.authDao().findByEmail(email)
     }
 }
