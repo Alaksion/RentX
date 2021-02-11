@@ -23,7 +23,7 @@
             android:name=".home.presentation.HomeActivity"
             android:label="@string/title_activity_home"/>
 
-        <activity android:name=".authentication.presentation.AuthenticationActivity"/>
+        <activity android:name=".authentication.presentation.activities.AuthenticationActivity"/>
 
         <activity android:name=".onboarding.presentation.OnboardingActivity"/>
 

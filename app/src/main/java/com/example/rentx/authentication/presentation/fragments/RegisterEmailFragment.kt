@@ -1,11 +1,10 @@
-package com.example.rentx.authentication.presentation
+package com.example.rentx.authentication.presentation.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.widget.doAfterTextChanged
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
@@ -13,8 +12,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import com.example.rentx.R
-import com.example.rentx.authentication.AuthenticationViewModel
+import com.example.rentx.authentication.presentation.AuthenticationViewModel
 import com.example.rentx.databinding.FragmentRegisterEmailBinding
+import com.example.rentx.shared.providers.toasts.ToastProvider
+import com.example.rentx.shared.providers.toasts.ToastType
 import kotlinx.android.synthetic.main.fragment_register_email.*
 
 
@@ -22,6 +23,7 @@ class RegisterFragment : Fragment(), View.OnClickListener {
 
     private lateinit var viewBinding: FragmentRegisterEmailBinding
     private lateinit var mViewModel : AuthenticationViewModel
+    private lateinit var toastProvider : ToastProvider
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,6 +39,7 @@ class RegisterFragment : Fragment(), View.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         setupListeners()
         setUpObservers()
+        toastProvider = ToastProvider(requireActivity())
         super.onViewCreated(view, savedInstanceState)
     }
 
@@ -62,7 +65,10 @@ class RegisterFragment : Fragment(), View.OnClickListener {
     private fun setUpObservers() {
         mViewModel.validationSuccess.observe(viewLifecycleOwner, Observer {
             if(!it.getResult()){
-                Toast.makeText(activity, it.getMessage(), Toast.LENGTH_SHORT).show()
+                toastProvider.createToast(
+                    it.getMessage(),
+                    ToastType.ERROR
+                )
 
             } else {
                 handleNavigateToPasswordScreen(viewBinding.btRegisterMailNext)
@@ -75,7 +81,10 @@ class RegisterFragment : Fragment(), View.OnClickListener {
         val name = viewBinding.etRegisterName.text.toString()
 
         val destination =
-            RegisterFragmentDirections.actionRegisterFragmentToRegisterPasswordFragment(email, name)
+            RegisterFragmentDirections.actionRegisterFragmentToRegisterPasswordFragment(
+                email,
+                name
+            )
 
         v.findNavController().navigate(destination)
     }

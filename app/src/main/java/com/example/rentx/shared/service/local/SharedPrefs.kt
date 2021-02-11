@@ -1,4 +1,4 @@
-package com.example.rentx.service.local
+package com.example.rentx.shared.service.local
 
 import android.content.Context
 import android.content.SharedPreferences

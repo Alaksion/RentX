@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/cl_toast_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="15dp"
+    tools:background="#2f80ed">
+
+    <ImageView
+        android:id="@+id/iv_toast_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:src="@drawable/ic_info"/>
+
+    <TextView
+        android:id="@+id/tv_toast_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/iv_toast_icon"
+        app:layout_constraintEnd_toStartOf="@id/iv_close_icon"
+        app:layout_constraintTop_toTopOf="@id/iv_toast_icon"
+        app:layout_constraintBottom_toBottomOf="@id/iv_toast_icon"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
+        tools:text="Esse é um toast de informação"
+        android:textColor="@color/white"
+        android:fontFamily="@font/archivo_regular"
+        android:textSize="18sp"/>
+
+    <ImageView
+        android:src="@drawable/ic_close"
+        android:id="@+id/iv_close_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/tv_toast_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

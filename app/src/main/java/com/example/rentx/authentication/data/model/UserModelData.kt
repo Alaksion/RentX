@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-class UserModel {
+class UserModelData {
 
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "userId")

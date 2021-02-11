@@ -1,4 +1,4 @@
-package com.example.rentx.service.listeners
+package com.example.rentx.shared.service.listeners
 
 class ValidationListener(string: String = ""){
 

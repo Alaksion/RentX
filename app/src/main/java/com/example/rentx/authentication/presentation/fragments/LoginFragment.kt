@@ -1,4 +1,4 @@
-package com.example.rentx.authentication.presentation
+package com.example.rentx.authentication.presentation.fragments
 
 import android.content.Intent
 import android.os.Bundle

@@ -1,4 +1,4 @@
-package com.example.rentx.authentication.presentation
+package com.example.rentx.authentication.presentation.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,19 +10,20 @@ import androidx.core.widget.doAfterTextChanged
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.NavArgs
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
 import com.example.rentx.R
-import com.example.rentx.authentication.AuthenticationViewModel
+import com.example.rentx.authentication.presentation.AuthenticationViewModel
 import com.example.rentx.databinding.FragmentRegisterPasswordBinding
-import kotlinx.android.synthetic.main.fragment_register_password.*
+import com.example.rentx.shared.providers.toasts.ToastProvider
+import com.example.rentx.shared.providers.toasts.ToastType
 
 
 class RegisterPasswordFragment : Fragment() {
 
     private lateinit var viewBinding: FragmentRegisterPasswordBinding
     private lateinit var mViewModel: AuthenticationViewModel
+    private lateinit var toastProvider: ToastProvider
 
     private val args: RegisterPasswordFragmentArgs by navArgs()
 
@@ -48,14 +49,14 @@ class RegisterPasswordFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setupListeners()
         setUpObservers()
+        toastProvider = ToastProvider(requireActivity())
     }
 
 
     private fun setupListeners() {
         viewBinding.registerPasswordGoBack.setOnClickListener() {
             val destination =
-                RegisterPasswordFragmentDirections
-                    .actionRegisterPasswordFragmentToRegisterFragment()
+                RegisterPasswordFragmentDirections.actionRegisterPasswordFragmentToRegisterFragment()
 
             Navigation.findNavController(viewBinding.registerPasswordGoBack)
                 .navigate(destination)
@@ -73,7 +74,7 @@ class RegisterPasswordFragment : Fragment() {
     private fun setUpObservers() {
         mViewModel.validationSuccess.observe(viewLifecycleOwner, Observer {
             if (!it.getResult()) {
-                Toast.makeText(activity, it.getMessage(), Toast.LENGTH_SHORT).show()
+                toastProvider.createToast(it.getMessage(), ToastType.ERROR)
             } else {
                 handleNavigateToSuccessPage()
             }
@@ -91,8 +92,7 @@ class RegisterPasswordFragment : Fragment() {
 
     private fun handleNavigateToSuccessPage() {
         val destination =
-            RegisterPasswordFragmentDirections
-                .actionRegisterPasswordFragmentToRegisterSuccessFragment()
+            RegisterPasswordFragmentDirections.actionRegisterPasswordFragmentToRegisterSuccessFragment()
 
         Navigation.findNavController(viewBinding.root)
             .navigate(destination)

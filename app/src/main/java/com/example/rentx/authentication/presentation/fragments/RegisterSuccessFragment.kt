@@ -1,4 +1,4 @@
-package com.example.rentx.authentication.presentation
+package com.example.rentx.authentication.presentation.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.rentx.R
 import com.example.rentx.databinding.FragmentRegisterSuccessBinding
