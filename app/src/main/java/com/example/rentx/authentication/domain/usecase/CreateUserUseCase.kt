@@ -3,6 +3,7 @@ package com.example.rentx.authentication.domain.usecase
 import android.app.Application
 import com.example.rentx.authentication.data.model.UserModelData
 import com.example.rentx.authentication.data.repositoy.AuthRepositoryImplementation
+import com.example.rentx.shared.service.listeners.UseCaseListener
 import com.example.rentx.shared.service.listeners.ValidationListener
 import com.example.rentx.shared.validators.EmailValidator
 
@@ -14,11 +15,13 @@ class CreateUserUseCase(application: Application) {
         name: String,
         email: String,
         password: String,
-        confirmPassword: String
-    ): ValidationListener {
+        confirmPassword: String,
+        listener: UseCaseListener<Long>
+    ) {
 
         if(!isPasswordConfirmed(password, confirmPassword)){
-            return ValidationListener("Senhas não coincidem")
+            listener.onError("Senhas não coincidem")
+            return
         }
 
 
@@ -29,9 +32,9 @@ class CreateUserUseCase(application: Application) {
             this.id = 0
         }
 
-        mRepository.createUser(user)
-        return ValidationListener()
+        val createdUserId = mRepository.createUser(user)
 
+        listener.onSuccess(createdUserId)
     }
 
     private fun isPasswordConfirmed(password: String, confirmPassword: String): Boolean {

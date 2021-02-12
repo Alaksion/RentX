@@ -17,13 +17,13 @@ import com.example.rentx.authentication.presentation.AuthenticationViewModel
 import com.example.rentx.databinding.FragmentRegisterPasswordBinding
 import com.example.rentx.shared.providers.toasts.ToastProvider
 import com.example.rentx.shared.providers.toasts.ToastType
+import com.example.rentx.shared.utils.EventObserver
 
 
 class RegisterPasswordFragment : Fragment() {
 
     private lateinit var viewBinding: FragmentRegisterPasswordBinding
     private lateinit var mViewModel: AuthenticationViewModel
-    private lateinit var toastProvider: ToastProvider
 
     private val args: RegisterPasswordFragmentArgs by navArgs()
 
@@ -49,7 +49,6 @@ class RegisterPasswordFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setupListeners()
         setUpObservers()
-        toastProvider = ToastProvider(requireActivity())
     }
 
 
@@ -72,9 +71,9 @@ class RegisterPasswordFragment : Fragment() {
     }
 
     private fun setUpObservers() {
-        mViewModel.validationSuccess.observe(viewLifecycleOwner, Observer {
+        mViewModel.validationSuccess.observe(viewLifecycleOwner, EventObserver {
             if (!it.getResult()) {
-                toastProvider.createToast(it.getMessage(), ToastType.ERROR)
+                ToastProvider.createToast(requireContext(), ToastType.ERROR, it.getMessage())
             } else {
                 handleNavigateToSuccessPage()
             }

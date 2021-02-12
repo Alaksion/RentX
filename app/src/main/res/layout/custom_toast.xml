@@ -23,7 +23,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@id/iv_toast_icon"
-        app:layout_constraintEnd_toStartOf="@id/iv_close_icon"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/iv_toast_icon"
         app:layout_constraintBottom_toBottomOf="@id/iv_toast_icon"
         android:layout_marginStart="20dp"
@@ -32,16 +32,6 @@
         android:textColor="@color/white"
         android:fontFamily="@font/archivo_regular"
         android:textSize="18sp"/>
-
-    <ImageView
-        android:src="@drawable/ic_close"
-        android:id="@+id/iv_close_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/tv_toast_message"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

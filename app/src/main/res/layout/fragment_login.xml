@@ -1,130 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".authentication.presentation.fragments.LoginFragment"
-    android:paddingHorizontal="30dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
-        android:id="@+id/login_back_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:src="@drawable/ic_chevron_left"
-        android:layout_marginTop="35dp"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".authentication.presentation.fragments.LoginFragment"
+        android:paddingHorizontal="30dp">
 
-    <TextView
-        android:id="@+id/tv_login_title"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/login_back_button"
-        style="@style/TextViewTitle"
-        android:text="@string/estamos_quase_l"
-        android:layout_marginTop="80dp"/>
+        <ImageView
+            android:id="@+id/login_back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:src="@drawable/ic_chevron_left"
+            android:layout_marginTop="35dp" />
 
-    <TextView
-        android:id="@+id/tv_login_text"
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_login_title"
-        style="@style/TextViewText"
-        android:layout_marginTop="10dp"
-        android:text="@string/fa_a_seu_login_para_come_ar_uma_experi_ncia_incr_vel"/>
+        <TextView
+            android:id="@+id/tv_login_title"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/login_back_button"
+            style="@style/TextViewTitle"
+            android:text="@string/estamos_quase_l"
+            android:layout_marginTop="80dp" />
 
-    <View
-        android:id="@+id/v_icon_email_container"
-        android:layout_marginTop="80dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_login_text"
-        style="@style/IconBox"/>
+        <TextView
+            android:id="@+id/tv_login_text"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_login_title"
+            style="@style/TextViewText"
+            android:layout_marginTop="10dp"
+            android:text="@string/fa_a_seu_login_para_come_ar_uma_experi_ncia_incr_vel" />
 
-    <ImageView
-        android:id="@+id/iv_icon_email"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        app:layout_constraintLeft_toLeftOf="@id/v_icon_email_container"
-        app:layout_constraintRight_toRightOf="@id/v_icon_email_container"
-        app:layout_constraintTop_toTopOf="@id/v_icon_email_container"
-        app:layout_constraintBottom_toBottomOf="@id/v_icon_email_container"
-        android:src="@drawable/ic_mail"
-        android:backgroundTint="@color/app_input_background" />
+        <View
+            android:id="@+id/v_icon_email_container"
+            android:layout_marginTop="80dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_login_text"
+            style="@style/IconBox" />
 
-    <EditText
-        android:id="@+id/et_email"
-        android:layout_width="0dp"
-        android:layout_height="70dp"
-        app:layout_constraintLeft_toRightOf="@id/v_icon_email_container"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/v_icon_email_container"
-        app:layout_constraintBottom_toBottomOf="@id/v_icon_email_container"
-        android:layout_marginStart="15dp"
-        android:hint="@string/e_mail"
-        style="@style/EditText"
-        android:inputType="textEmailAddress" />
+        <ImageView
+            android:id="@+id/iv_icon_email"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintLeft_toLeftOf="@id/v_icon_email_container"
+            app:layout_constraintRight_toRightOf="@id/v_icon_email_container"
+            app:layout_constraintTop_toTopOf="@id/v_icon_email_container"
+            app:layout_constraintBottom_toBottomOf="@id/v_icon_email_container"
+            android:src="@drawable/ic_mail"
+            android:backgroundTint="@color/app_input_background" />
 
-    <View
-        android:id="@+id/v_icon_password_container"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_icon_email"
-        android:layout_marginTop="25dp"
-        style="@style/IconBox"/>
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            app:layout_constraintLeft_toRightOf="@id/v_icon_email_container"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/v_icon_email_container"
+            app:layout_constraintBottom_toBottomOf="@id/v_icon_email_container"
+            android:layout_marginStart="15dp"
+            android:hint="@string/e_mail"
+            style="@style/EditText"
+            android:inputType="textEmailAddress" />
 
-    <ImageView
-        android:id="@+id/iv_icon_password"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        app:layout_constraintLeft_toLeftOf="@id/v_icon_password_container"
-        app:layout_constraintRight_toRightOf="@id/v_icon_password_container"
-        app:layout_constraintTop_toTopOf="@id/v_icon_password_container"
-        app:layout_constraintBottom_toBottomOf="@id/v_icon_password_container"
-        android:src="@drawable/ic_lock"/>
+        <View
+            android:id="@+id/v_icon_password_container"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_icon_email"
+            android:layout_marginTop="25dp"
+            style="@style/IconBox" />
 
-    <EditText
-        android:id="@+id/et_password"
-        android:layout_width="0dp"
-        android:layout_height="70dp"
-        app:layout_constraintLeft_toRightOf="@id/v_icon_password_container"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/v_icon_password_container"
-        app:layout_constraintBottom_toBottomOf="@id/v_icon_password_container"
-        android:layout_marginStart="15dp"
-        android:hint="Senha"
-        style="@style/EditText"/>
+        <ImageView
+            android:id="@+id/iv_icon_password"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintLeft_toLeftOf="@id/v_icon_password_container"
+            app:layout_constraintRight_toRightOf="@id/v_icon_password_container"
+            app:layout_constraintTop_toTopOf="@id/v_icon_password_container"
+            app:layout_constraintBottom_toBottomOf="@id/v_icon_password_container"
+            android:src="@drawable/ic_lock" />
 
-    <CheckBox
-        android:id="@+id/cb_remember_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/v_icon_password_container"
-        android:layout_marginTop="20dp"
-        android:text="@string/lembrar_me"
-        style="@style/CheckBox"/>
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            app:layout_constraintLeft_toRightOf="@id/v_icon_password_container"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/v_icon_password_container"
+            app:layout_constraintBottom_toBottomOf="@id/v_icon_password_container"
+            android:layout_marginStart="15dp"
+            android:hint="Senha"
+            style="@style/EditText"
+            android:inputType="textPassword"/>
 
-    <TextView
-        android:id="@+id/tv_forgot_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/cb_remember_login"
-        app:layout_constraintBottom_toBottomOf="@id/cb_remember_login"
-        android:text="@string/esqueci_minha_senha"
-        />
+        <CheckBox
+            android:id="@+id/cb_remember_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v_icon_password_container"
+            android:layout_marginTop="20dp"
+            android:text="@string/lembrar_me"
+            style="@style/CheckBox" />
 
-    <Button
-        android:id="@+id/bt_login"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cb_remember_login"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:text="@string/login"
-        style="@style/ButtonRed"/>
+        <TextView
+            android:id="@+id/tv_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/cb_remember_login"
+            app:layout_constraintBottom_toBottomOf="@id/cb_remember_login"
+            android:text="@string/esqueci_minha_senha" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/bt_login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cb_remember_login"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="@string/login"
+            style="@style/ButtonRed"
+            android:enabled="false"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

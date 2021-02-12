@@ -3,7 +3,7 @@ package com.example.rentx.shared.service.local
 import android.content.Context
 import android.content.SharedPreferences
 
-class SharedPrefs(context: Context) {
+class SecurityPreferences(context: Context) {
 
     private var prefs: SharedPreferences =
         context.getSharedPreferences("RentX", Context.MODE_PRIVATE)

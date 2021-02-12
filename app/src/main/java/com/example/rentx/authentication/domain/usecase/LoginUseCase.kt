@@ -5,26 +5,28 @@ import com.example.rentx.authentication.data.model.UserModelData
 import com.example.rentx.authentication.data.repositoy.AuthRepositoryImplementation
 import com.example.rentx.shared.service.listeners.UseCaseListener
 import com.example.rentx.shared.service.listeners.ValidationListener
-import com.example.rentx.shared.validators.EmailValidator
 
-class ValidateDuplicatedMailUseCase(application: Application) {
+class LoginUseCase(application: Application) {
 
     private val mRepository = AuthRepositoryImplementation(application)
 
-    fun execute(email: String, listener: UseCaseListener<Long>) {
+    fun execute(
+        email: String,
+        password: String,
+        listener: UseCaseListener<UserModelData>
+    ) {
+        val user: UserModelData? = mRepository.findUserByEmail(email)
 
-        if(!EmailValidator.validate(email)){
-            listener.onError("E-mail em formato inválido")
+        if (user == null) {
+            listener.onError("Usuário não encontrado")
             return
         }
 
-        val findUsedEmail: UserModelData? = this.mRepository.findUserByEmail(email)
-
-        if (findUsedEmail != null) {
-            listener.onError("E-mail já está em uso")
+        if (user.password !== password) {
+            listener.onError("Credenciais inválidas")
             return
         }
 
-        listener.onSuccess(1)
+        listener.onSuccess(user)
     }
 }
