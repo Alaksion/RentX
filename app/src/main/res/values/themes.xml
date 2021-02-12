@@ -77,7 +77,7 @@
     </style>
 
     <style name="ButtonRed">
-        <item name="android:backgroundTint">@color/app_red</item>
+        <item name="android:backgroundTint">@color/button_red_color</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:padding">20dp</item>
     </style>
@@ -128,7 +128,7 @@
     <style name="CarList_PriceText">
         <item name="android:fontFamily">@font/archivo_regular</item>
         <item name="android:textSize">18sp</item>
-        <item name="android:textColor">@color/app_red</item>
+        <item name="android:textColor">@color/red</item>
     </style>
 
 </resources>

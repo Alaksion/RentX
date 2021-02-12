@@ -3,7 +3,6 @@ package com.example.rentx.splash.presentation
 import android.animation.Animator
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -18,7 +17,6 @@ class SplashActivity : AppCompatActivity(), Animator.AnimatorListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-
 
         setupAnimationSequence()
         animationSequence.addListener(this)
@@ -62,6 +60,5 @@ class SplashActivity : AppCompatActivity(), Animator.AnimatorListener {
     override fun onAnimationStart(animation: Animator) {
         print("animationStarted")
     }
-
 
 }

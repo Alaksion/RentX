@@ -1,7 +1,6 @@
-package com.example.rentx.authentication.presentation
+package com.example.rentx.authentication.presentation.activities
 
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

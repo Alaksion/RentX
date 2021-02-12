@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/authMenuFragment"
-        android:name="com.example.rentx.authentication.presentation.AuthMenuFragment"
+        android:name="com.example.rentx.authentication.presentation.fragments.AuthMenuFragment"
         android:label="fragment_auth_menu"
         tools:layout="@layout/fragment_auth_menu" >
         <action
@@ -28,7 +28,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.rentx.authentication.presentation.LoginFragment"
+        android:name="com.example.rentx.authentication.presentation.fragments.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -41,7 +41,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.example.rentx.authentication.presentation.RegisterFragment"
+        android:name="com.example.rentx.authentication.presentation.fragments.RegisterFragment"
         android:label="fragment_register_email"
         tools:layout="@layout/fragment_register_email" >
         <action
@@ -61,7 +61,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerPasswordFragment"
-        android:name="com.example.rentx.authentication.presentation.RegisterPasswordFragment"
+        android:name="com.example.rentx.authentication.presentation.fragments.RegisterPasswordFragment"
         android:label="fragment_register_password"
         tools:layout="@layout/fragment_register_password" >
         <action
@@ -78,10 +78,16 @@
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <argument
+            android:name="name"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/registerSuccessFragment"
-        android:name="com.example.rentx.authentication.presentation.RegisterSuccessFragment"
+        android:name="com.example.rentx.authentication.presentation.fragments.RegisterSuccessFragment"
         android:label="fragment_register_success"
         tools:layout="@layout/fragment_register_success" >
         <action
