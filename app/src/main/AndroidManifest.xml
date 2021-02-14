@@ -11,7 +11,7 @@
         android:theme="@style/Theme.RentX">
 
         <activity
-            android:name=".splash.presentation.SplashActivity">
+            android:name=".presentation.splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,12 +20,12 @@
         </activity>
 
         <activity
-            android:name=".home.presentation.HomeActivity"
+            android:name=".presentation.home.HomeActivity"
             android:label="@string/title_activity_home"/>
 
-        <activity android:name=".authentication.presentation.activities.AuthenticationActivity"/>
+        <activity android:name=".presentation.authentication.AuthenticationActivity"/>
 
-        <activity android:name=".onboarding.presentation.OnboardingActivity"/>
+        <activity android:name=".presentation.onboarding.OnboardingActivity"/>
 
     </application>
 </manifest>

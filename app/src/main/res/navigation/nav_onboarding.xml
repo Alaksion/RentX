@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/chooseDateFragment"
-        android:name="com.example.rentx.onboarding.presentation.ChooseDateFragment"
+        android:name="com.example.rentx.presentation.onboarding.ChooseDateFragment"
         android:label="fragment_choose_date"
         tools:layout="@layout/fragment_choose_date" >
         <action
@@ -21,7 +21,7 @@
 
     <fragment
         android:id="@+id/chooseCarFragment"
-        android:name="com.example.rentx.onboarding.presentation.ChooseCarFragment"
+        android:name="com.example.rentx.presentation.onboarding.ChooseCarFragment"
         android:label="fragment_choose_car"
         tools:layout="@layout/fragment_choose_car" />
 </navigation>

@@ -6,7 +6,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".authentication.presentation.fragments.LoginFragment"
+        tools:context=".presentation.authentication.LoginFragment"
         android:paddingHorizontal="30dp">
 
         <ImageView

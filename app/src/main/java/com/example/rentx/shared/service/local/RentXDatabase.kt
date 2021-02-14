@@ -4,8 +4,8 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.rentx.authentication.data.local.AuthenticationDao
-import com.example.rentx.authentication.data.model.UserModelData
+import com.example.rentx.data.local.AuthenticationDao
+import com.example.rentx.data.model.UserModelData
 
 @Database(entities = [UserModelData::class], version = 1)
 abstract class RentXDatabase : RoomDatabase() {
