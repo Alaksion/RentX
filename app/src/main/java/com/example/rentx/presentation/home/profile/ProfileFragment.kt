@@ -11,12 +11,14 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.rentx.R
 import com.example.rentx.databinding.FragmentProfileBinding
 import com.example.rentx.presentation.authentication.AuthenticationActivity
+import com.example.rentx.presentation.home.profile.adapter.ProfileFragmentPagerAdapter
 import com.example.rentx.shared.utils.EventObserver
 
 class ProfileFragment : Fragment() {
 
-    private lateinit var viewBinding : FragmentProfileBinding
-    private lateinit var mViewModel : ProfileViewModel
+    private lateinit var viewBinding: FragmentProfileBinding
+    private lateinit var mViewModel: ProfileViewModel
+    private lateinit var adapter : ProfileFragmentPagerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +36,8 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setUpObservers()
+        setUpListener()
+        setUpPager()
     }
 
     override fun onResume() {
@@ -42,11 +46,11 @@ class ProfileFragment : Fragment() {
         mockProfileImage()
     }
 
-    private fun mockProfileImage(){
+    private fun mockProfileImage() {
         viewBinding.ivProfileImage.setImageResource(mViewModel.getUserImage())
     }
 
-    private fun setUpObservers(){
+    private fun setUpObservers() {
         mViewModel.logoutEvent.observe(viewLifecycleOwner, EventObserver {
             AuthenticationActivity.start(requireActivity())
             requireActivity().finish()
@@ -57,4 +61,15 @@ class ProfileFragment : Fragment() {
         })
     }
 
+    private fun setUpPager(){
+        adapter = ProfileFragmentPagerAdapter(childFragmentManager)
+        viewBinding.vpProfile.adapter = adapter
+        viewBinding.tbProfileTabs.setupWithViewPager(viewBinding.vpProfile)
+    }
+
+    private fun setUpListener(){
+        viewBinding.ivLogout.setOnClickListener {
+            mViewModel.logoutUser()
+        }
+    }
 }
