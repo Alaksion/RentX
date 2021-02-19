@@ -25,6 +25,10 @@ class UserRepositoryImplementation(context: Context) : UserRepository {
 
     }
 
+    override fun updatePassword(userModelData: UserModelData) {
+        return mDatabase.userDao().updatePassword(userModelData.password, userModelData.id)
+    }
+
     override fun findUserById(userId: Long): UserModelData {
         return mDatabase.userDao().findUserById(userId)
     }

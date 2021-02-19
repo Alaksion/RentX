@@ -13,4 +13,7 @@ interface UserDao {
 
     @Query("Select * from usermodeldata where userId = :userId")
     fun findUserById(userId: Long): UserModelData
+
+    @Query("Update usermodeldata set password = :password where userId = :userId")
+    fun updatePassword(password: String, userId: Long)
 }

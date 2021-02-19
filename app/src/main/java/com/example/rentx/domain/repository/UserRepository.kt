@@ -6,5 +6,7 @@ interface UserRepository {
 
     fun updateEmailAndUsername(userModelData: UserModelData) : UserModelData
 
+    fun updatePassword(userModelData: UserModelData)
+
     fun findUserById(userId: Long) : UserModelData
 }

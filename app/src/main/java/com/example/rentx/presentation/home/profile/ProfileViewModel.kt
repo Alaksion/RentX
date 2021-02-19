@@ -7,6 +7,7 @@ import androidx.lifecycle.MutableLiveData
 import com.example.rentx.R
 import com.example.rentx.data.model.UserModelData
 import com.example.rentx.domain.usecase.UpdateEmailAndPasswordUseCase
+import com.example.rentx.domain.usecase.UpdatePasswordUseCase
 import com.example.rentx.shared.constants.RentXConstants
 import com.example.rentx.shared.service.listeners.UseCaseListener
 import com.example.rentx.shared.service.listeners.ValidationListener
@@ -17,9 +18,9 @@ class ProfileViewModel(application: Application) : AndroidViewModel(application)
 
     private val sharedPrefs = SecurityPreferences(application)
     private val updateEmailAndPasswordUseCase = UpdateEmailAndPasswordUseCase(application)
+    private val updatePasswordUseCase = UpdatePasswordUseCase(application)
 
     val logoutEvent = MutableLiveData<Event<Unit>>()
-    val updateEmailAndPasswordEvent = MutableLiveData<Event<Unit>>()
 
     private val mUserName = MutableLiveData<String>()
     var userName: LiveData<String> = mUserName
@@ -69,5 +70,23 @@ class ProfileViewModel(application: Application) : AndroidViewModel(application)
                 }
             })
 
+    }
+
+    fun updatePassword(password: String, confirmPassword: String) {
+        val userId = sharedPrefs.get(RentXConstants.SharedPrefs.USER_ID_KEY).toLong()
+
+        updatePasswordUseCase.execute(
+            password,
+            confirmPassword,
+            userId,
+            object : UseCaseListener<Unit> {
+                override fun onSuccess(response: Unit) {
+                    mValidationListener.value = ValidationListener()
+                }
+
+                override fun onError(message: String) {
+                    mValidationListener.value = ValidationListener(message)
+                }
+            })
     }
 }
