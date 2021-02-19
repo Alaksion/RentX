@@ -3,34 +3,28 @@ package com.example.rentx.presentation.home.profile.adapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
+import androidx.room.Update
 import com.example.rentx.presentation.home.profile.UpdateEmailUsernameFragment
 import com.example.rentx.presentation.home.profile.UpdatePasswordFragment
 
 class ProfileFragmentPagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
 
+    private val tabFragmentList =
+        arrayListOf(UpdateEmailUsernameFragment(), UpdatePasswordFragment())
+
     override fun getItem(position: Int): Fragment {
-        return if (position == 0) {
-            UpdateEmailUsernameFragment()
-        } else {
-            UpdatePasswordFragment()
-        }
+        return tabFragmentList[position]
     }
 
     override fun getCount(): Int {
-        return 2
+        return tabFragmentList.size
     }
 
     override fun getPageTitle(position: Int): CharSequence? {
         return if (position == 0) {
-            "Dados"
+            UpdateEmailUsernameFragment.TAB_NAME
         } else {
-            "Senha"
+            UpdatePasswordFragment.TAB_NAME
         }
     }
-
-    companion object {
-        const val ARG_OBJECT = "object"
-    }
-
-
 }

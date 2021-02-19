@@ -20,16 +20,12 @@ class ProfileFragment : Fragment() {
     private lateinit var mViewModel: ProfileViewModel
     private lateinit var adapter : ProfileFragmentPagerAdapter
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        mViewModel = ViewModelProvider(this).get(ProfileViewModel::class.java)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         viewBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_profile, container, false)
+        mViewModel = ViewModelProvider(this).get(ProfileViewModel::class.java)
         return viewBinding.root
     }
 

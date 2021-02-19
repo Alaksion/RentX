@@ -44,4 +44,8 @@
     <string name="title_activity_tab_act">tab_act</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+    <string name="nome_de_usu_rio">Nome de usuário</string>
+    <string name="salvar_altera_es">Salvar alterações</string>
+    <string name="nova_senha">Nova senha</string>
+    <string name="confirmar_senha">Confirmar senha</string>
 </resources>

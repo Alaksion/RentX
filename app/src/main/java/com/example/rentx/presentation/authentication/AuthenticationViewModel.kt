@@ -67,6 +67,7 @@ class AuthenticationViewModel(application: Application) : AndroidViewModel(appli
             override fun onSuccess(response: UserModelData) {
                 mPrefs.save(RentXConstants.SharedPrefs.USER_EMAIL_KEY, response.email)
                 mPrefs.save(RentXConstants.SharedPrefs.USER_NAME_KEY, response.name)
+                mPrefs.save(RentXConstants.SharedPrefs.USER_ID_KEY, response.id.toString())
 
                 mValidationSuccess.value = Event(ValidationListener())
             }

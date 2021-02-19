@@ -5,12 +5,14 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.rentx.data.local.AuthenticationDao
+import com.example.rentx.data.local.UserDao
 import com.example.rentx.data.model.UserModelData
 
 @Database(entities = [UserModelData::class], version = 1)
 abstract class RentXDatabase : RoomDatabase() {
 
     abstract fun authDao() : AuthenticationDao
+    abstract fun userDao() : UserDao
 
     companion object {
         private lateinit var DB_INSTANCE: RentXDatabase
