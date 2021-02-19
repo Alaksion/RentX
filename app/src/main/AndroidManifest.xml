@@ -9,23 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RentX">
-
         <activity
-            android:name=".splash.presentation.SplashActivity">
+            android:name=".teste.tab_act"
+            android:label="@string/title_activity_tab_act"
+            android:theme="@style/Theme.RentX.NoActionBar"></activity>
+        <activity android:name=".presentation.splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name=".home.presentation.HomeActivity"
-            android:label="@string/title_activity_home"/>
-
-        <activity android:name=".authentication.presentation.activities.AuthenticationActivity"/>
-
-        <activity android:name=".onboarding.presentation.OnboardingActivity"/>
-
+            android:name=".presentation.home.HomeActivity"
+            android:label="@string/title_activity_home" />
+        <activity android:name=".presentation.authentication.AuthenticationActivity" />
+        <activity android:name=".presentation.onboarding.OnboardingActivity" />
     </application>
+
 </manifest>

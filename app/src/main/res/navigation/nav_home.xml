@@ -7,29 +7,17 @@
 
     <fragment
         android:id="@+id/carListFragment"
-        android:name="com.example.rentx.home.presentation.carlist.CarListFragment"
+        android:name="com.example.rentx.presentation.home.carlist.CarListFragment"
         android:label="fragment_car_list"
         tools:layout="@layout/fragment_car_list" />
     <fragment
         android:id="@+id/homeFragment2"
-        android:name="com.example.rentx.home.presentation.home.HomeFragment"
+        android:name="com.example.rentx.presentation.home.main.HomeFragment"
         android:label="fragment_home2"
         tools:layout="@layout/fragment_home2" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.rentx.home.presentation.profile.ProfileFragment"
+        android:name="com.example.rentx.presentation.home.profile.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" >
-        <action
-            android:id="@+id/action_profileFragment_to_editProfileFragment"
-            app:destination="@id/editProfileFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/editProfileFragment"
-        android:name="com.example.rentx.home.presentation.profile.EditProfileFragment"
-        android:label="EditProfileFragment" >
-        <action
-            android:id="@+id/action_editProfileFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_profile" />
 </navigation>
