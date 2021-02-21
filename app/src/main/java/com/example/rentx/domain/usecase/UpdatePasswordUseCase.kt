@@ -6,6 +6,7 @@ import com.example.rentx.data.repository.UserRepositoryImplementation
 import com.example.rentx.shared.service.listeners.UseCaseListener
 import java.lang.Exception
 
+
 class UpdatePasswordUseCase(application: Application) {
 
     private val mRepository = UserRepositoryImplementation(application)
